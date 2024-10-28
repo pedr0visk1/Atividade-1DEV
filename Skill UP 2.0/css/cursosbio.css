@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    background: #111;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container nav h1 {
+    font-size: 2.6em;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    pointer-events: all;
+    letter-spacing: 4px;
+}
+
+.container nav h1 span {
+    color: #00bfff;
+}
+
+.container nav ul {
+    display: flex;
+}
+
+.container nav ul li {
+    position: relative;
+    list-style: none;
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: 12px 18px;
+    cursor: pointer;
+    pointer-events: all;
+    overflow: hidden;
+}
+
+.container nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    width: 0%;
+    height: 3px;
+    left: 50%;
+    background: #00bfff;
+    transform: translateX(-50%);
+    transition: width 0.3s;
+}
+
+.container nav ul li:hover {
+    color: #00bfff;
+}
+
+.container nav ul li:hover::after {
+    width: 80%;
+}
+
+.container nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 100px;
+    align-items: center;
+}
+
+
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(0, 47, 112) 3%, rgb(30, 66, 105) 38%, rgb(30, 66, 105) 68%, rgb(0, 47, 112) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgba(0, 81, 255, 0.25);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+
+img { 
+    
+    border-radius: 50px;
+}
+
+.card {
+    height: 65vh;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(64, 124, 255, 0.12) 0px 4px 6px,
+                rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;    
+}
+
+i { 
+    color: rgb(57, 120, 255);
+    font-size: 40px;
+}
